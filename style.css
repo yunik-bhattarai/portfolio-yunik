@@ -1,0 +1,965 @@
+/* General Setup */
+:root {
+    --primary-color: #3b82f6; /* A nice blue for highlights/buttons */
+    --text-color: #1f2937; /* Dark gray for main text */
+    --light-bg: #f8f9fb; /* Very light blue/white background */
+    --font-family: 'Arial', sans-serif; /* A common, clean font */
+    
+    /* Project colors */
+    --project-blue: #4f46e5;
+    --project-green: #10b981;
+    --project-purple: #8b5cf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: white; 
+}
+
+/* Background Effect (Soft Gradient/Shadow for Hero) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at top left, var(--light-bg) 0%, transparent 40%);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* --- Utility Classes --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: transparent;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    padding-top: 50px;
+}
+
+.hero-section .content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.tagline {
+    font-size: 1.05em;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    box-shadow: 0 6px 8px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--text-color);
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-bg);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* **UPDATED SECTION: Hero Social Icons for Image Logos** */
+.social-links a {
+    /* If you replaced Font Awesome icons with images, 
+       this ensures the logo image is centered in the hover area */
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    /* Maintain the size you want for the clickable area */
+    width: 30px; 
+    height: 30px;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+/* NEW: Style for the actual image inside the social link anchor */
+.social-links .social-icon-img {
+    width: 100%; /* Image takes up the full width of the anchor container */
+    height: 100%;
+    object-fit: contain; /* Ensures the logo fits without being cut off */
+    display: block;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    /* Removed color change on hover, as the image color defines the icon. */
+}
+
+/* --- About Me Section --- */
+.about-me-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--light-bg); 
+    border-radius: 10px;
+    min-height: 400px;
+}
+
+/* **MODIFIED SECTION: Profile Circle (to hold an image)** */
+.profile-circle {
+    width: 350px;
+    height: 350px;
+    /* REMOVED: background-color: var(--primary-color);, color: white;, font-size: 3em; */
+    
+    /* CRITICAL: Must use overflow: hidden to crop the image into a circle */
+    overflow: hidden; 
+    
+    background-color: #f3f4f6; /* Optional: A fallback light background */
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* **NEW: Profile Image Styling** */
+.profile-circle .profile-img {
+    width: 100%;
+    height: 100%;
+    /* CRITICAL: Ensures image covers the entire circle area */
+    object-fit: cover; 
+    display: block;
+    border-radius: 50%; /* Ensures compatibility */
+}
+
+.about-text {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #4b5563;
+}
+
+/* --- Qualities Section --- */
+.qualities-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.qualities-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.quality-card {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.quality-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.icon-box {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.quality-card h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.quality-card p {
+    font-size: 0.95em;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* --- Skills Section --- */
+.skills-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.skills-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+}
+
+.skill-card h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.skill-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px; 
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 1.5px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.skill-tag {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tag-wide {
+    padding: 8px 20px;
+}
+
+/* --- Projects Section --- */
+.projects-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 0; /* Ensures image starts at the top edge */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* **MODIFIED SECTION: Project Visual (Placeholder) ** */
+.project-visual {
+    /* Set height to match the image height below for visual consistency */
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.bg-blue { background-color: var(--project-blue); }
+.bg-green { background-color: var(--project-green); }
+.bg-purple { background-color: var(--project-purple); }
+
+/* **CONFIRMED: Project Visual Image (Screenshot)** */
+.project-visual-image {
+    width: 100%; 
+    height: 200px; /* Consistent height for all visuals */
+    object-fit: cover; /* Crops image to fill the space */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
+    margin-bottom: 0;
+}
+
+.project-details {
+    padding: 20px; 
+}
+
+.project-details h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.project-details p {
+    font-size: 0.9em;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 70px;
+}
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
+}
+
+.tech-tag {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #4b5563;
+    background-color: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9em;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.project-link i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.project-link:hover {
+    color: var(--primary-color);
+}
+
+/* --- Experience Section (Timeline) --- */
+.experience-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 2px;
+    background-color: #e5e7eb;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1em;
+    z-index: 10;
+    box-shadow: 0 0 0 5px white;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.job-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.job-date {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+.company-name {
+    font-size: 1em;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.job-description {
+    font-size: 0.95em;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.job-achievements {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.job-achievements li {
+    font-size: 0.9em;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.job-achievements li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    padding: 80px 80px;
+    background-color: white;
+}
+
+.contact-section .section-title {
+    text-align: left;
+    margin-bottom: 0; 
+}
+.contact-section .section-title h2::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+/* **NEW: Styling for Custom Contact Icon Images (Applies to Location too!)** */
+.contact-detail-item .info-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; 
+    color: transparent;
+}
+
+.contact-detail-item .contact-icon-img {
+    width: 60%; 
+    height: 60%;
+    object-fit: contain; 
+    display: block;
+}
+
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    padding-top: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.intro-text {
+    font-size: 1.05em;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #eff6ff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-text .label {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2px;
+}
+
+.info-text a, .info-text p {
+    font-size: 0.95em;
+    color: #6b7280;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.contact-form-wrapper {
+    flex: 1.5;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1em;
+    color: var(--text-color);
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05em;
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 60px 80px 20px;
+    font-family: var(--font-family);
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-col {
+    flex-basis: 30%;
+}
+
+.footer-col h3 {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.branding-col p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #9ca3af;
+}
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col ul li {
+    margin-bottom: 10px;
+}
+
+.links-col a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.links-col a:hover {
+    color: var(--primary-color);
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-links a {
+    color: #e5e7eb;
+    background-color: #374151;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    /* Use flex to center the logo image */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+/* **NEW: Footer Social Logo Image** */
+.footer-social-links .social-icon-img {
+    width: 70%; /* Image takes up 70% of the box, creating a nice padding */
+    height: 70%;
+    object-fit: contain; /* Ensures logo is not stretched or clipped */
+    display: block;
+}
+
+.footer-social-links a:hover {
+    background-color: var(--primary-color);
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #9ca3af;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    /* General */
+    .navbar {
+        padding: 15px 20px;
+    }
+    .navbar ul {
+        display: none; /* Hide nav links on small screens for simplicity */
+    }
+    .hero-section {
+        height: 80vh;
+    }
+    .content h1 {
+        font-size: 2.5em;
+    }
+
+    /* About */
+    .about-me-section, .qualities-section, .skills-section, .projects-section, .experience-section, .contact-section {
+        padding: 60px 20px;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-visual {
+        min-height: auto;
+        padding: 20px;
+    }
+    .about-text {
+        text-align: left;
+    }
+
+    /* Qualities, Skills, Projects */
+    .qualities-container, .skills-container, .projects-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .project-details p {
+        min-height: auto;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-section .section-title {
+        text-align: center;
+    }
+    .contact-section .section-title h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* **CONFIRMED: Responsive styling for social link images** */
+    .footer-social-links a {
+        display: flex; /* Changed from inline-block to flex for better centering */
+        justify-content: center;
+        align-items: center;
+        width: 40px; 
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .footer-social-links .social-icon-img {
+        width: 70%; 
+        height: 70%;
+        object-fit: contain; 
+    }
+
+    /* Footer */
+    .main-footer {
+        padding: 40px 20px 15px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .content h1 {
+        font-size: 2em;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 80%;
+    }
+    .qualities-container, .skills-container, .projects-container {
+        grid-template-columns: 1fr;
+    }
+    /* Timeline adjustments for very small screens */
+    .timeline-container {
+        padding-left: 10px;
+    }
+    .timeline-container::before {
+        left: 0;
+    }
+    .timeline-item {
+        padding-left: 30px;
+    }
+    .timeline-icon {
+        left: -18px;
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+    }
+    .job-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
