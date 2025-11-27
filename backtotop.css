@@ -1,0 +1,19 @@
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;        /* hidden by default */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Submitted Form Details</h2>
+
+<div class="box">
+    <p><strong>Name:</strong> <span id="outName"></span></p>
+    <p><strong>Email:</strong> <span id="outEmail"></span></p>
+    <p><strong>Subject:</strong> <span id="outSubject"></span></p>
+    <p><strong>Message:</strong> <span id="outMessage"></span></p>
+</div>
+
+<script>
+document.getElementById("outName").innerText = localStorage.getItem("formName");
+document.getElementById("outEmail").innerText = localStorage.getItem("formEmail");
+document.getElementById("outSubject").innerText = localStorage.getItem("formSubject");
+document.getElementById("outMessage").innerText = localStorage.getItem("formMessage");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* ============================
+   DARK MODE THEME OVERRIDES
+   ============================ */
+
+body.dark {
+    --primary-color: #60a5fa; /* Lighter blue for dark mode */
+    --text-color: #f3f4f6; /* Light text */
+    --light-bg: #1f2937; /* Dark gray background blocks */
+    background-color: #0f172a; /* Main dark background */
+    color: var(--text-color);
+}
+
+/* Background fade effect */
+body.dark::before {
+    background: radial-gradient(circle at top left, #1e293b 0%, transparent 40%);
+}
+
+/* NAVBAR */
+body.dark .navbar a {
+    color: #e5e7eb;
+}
+body.dark .navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* HERO */
+body.dark .tagline {
+    color: #9ca3af;
+}
+
+body.dark .btn-secondary {
+    background-color: #1e293b;
+    color: #e5e7eb;
+    border: 1px solid #334155;
+}
+body.dark .btn-secondary:hover {
+    background-color: #334155;
+    color: var(--primary-color);
+}
+
+/* ABOUT SECTION */
+body.dark .about-me-section {
+    background-color: #0f172a;
+}
+body.dark .profile-visual {
+    background-color: #1e293b;
+}
+body.dark .about-text {
+    color: #d1d5db;
+}
+
+/* QUALITIES */
+body.dark .qualities-section {
+    background-color: #0f172a;
+}
+body.dark .quality-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+body.dark .quality-card:hover {
+    box-shadow: 0 10px 20px rgba(255,255,255,0.05);
+}
+body.dark .quality-card p {
+    color: #9ca3af;
+}
+
+/* SKILLS */
+body.dark .skills-section {
+    background-color: #0f172a;
+}
+body.dark .skill-card {
+    background-color: #1e293b;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+body.dark .skill-tag {
+    background-color: #1e3a8a;
+    color: #bfdbfe;
+}
+
+/* PROJECTS */
+body.dark .projects-section {
+    background-color: #0f172a;
+}
+body.dark .project-card {
+    background-color: #1e293b;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+body.dark .project-details p {
+    color: #9ca3af;
+}
+body.dark .tech-tag {
+    background-color: #334155;
+    color: #cbd5e1;
+}
+body.dark .project-link {
+    color: #cbd5e1;
+}
+body.dark .project-link:hover {
+    color: var(--primary-color);
+}
+
+/* EXPERIENCE */
+body.dark .experience-section {
+    background-color: #0f172a;
+}
+body.dark .timeline-container::before {
+    background-color: #334155;
+}
+body.dark .timeline-icon {
+    box-shadow: 0 0 0 5px #1e293b;
+}
+body.dark .timeline-content {
+    background-color: #1e293b;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.05);
+}
+body.dark .company-name,
+body.dark .job-description,
+body.dark .job-achievements li {
+    color: #cbd5e1;
+}
+
+/* CONTACT */
+body.dark .contact-section {
+    background-color: #0f172a;
+}
+body.dark .contact-detail-item .info-icon {
+    background-color: #1e293b;
+}
+body.dark .info-text .label {
+    color: #e2e8f0;
+}
+body.dark .info-text a,
+body.dark .info-text p {
+    color: #cbd5e1;
+}
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #e5e7eb;
+}
+body.dark .contact-form input:focus,
+body.dark .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+/* FOOTER */
+body.dark .main-footer {
+    background-color: #0f172a;
+}
+
+body.dark .footer-col h3 {
+    color: #fff;
+}
+body.dark .branding-col p {
+    color: #94a3b8;
+}
+body.dark .links-col a {
+    color: #94a3b8;
+}
+body.dark .links-col a:hover {
+    color: var(--primary-color);
+}
+
+body.dark .footer-social-links a {
+    background-color: #1e293b;
+}
+body.dark .footer-bottom {
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+}

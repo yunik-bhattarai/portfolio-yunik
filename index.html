@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yunik Bhattarai - Tech Enthusiast, Active Learner</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="black.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="backtotop.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="skills.css">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet">
     </head>
 <body>
     
     <header class="navbar">
+  
         <div class="logo">Yunik Bhattarai</div>
+        
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -17,9 +28,17 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>  <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle dark mode"
+          title="Toggle dark mode"
+        >
+          <i class="ri-moon-line"></i>
+        </button>
             </ul>
         </nav>
+             
     </header>
 
     <main class="hero-section" id="home">
@@ -48,7 +67,7 @@
             <div class="profile-visual">
                 <div class="profile-circle">
                     <div class="profile-circle">
-    <img src="pp.png" alt="Your Profile Picture" class="profile-img">
+    <img src="photo pp.jpg" alt="Your Profile Picture" class="profile-img">
 </div>
                 </div>
             </div>
@@ -127,6 +146,37 @@
                 </div>
             </div>
         </div>
+
+        <div class="progress-bars-container">
+        <h3>Skill Levels</h3>
+        <div class="progress-bar" data-progress="90%">
+            <span class="skill-name">HTML</span>
+            <div class="progress-bg">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        <div class="progress-bar" data-progress="85%">
+            <span class="skill-name">CSS</span>
+            <div class="progress-bg">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        <div class="progress-bar" data-progress="80%">
+            <span class="skill-name">JavaScript</span>
+            <div class="progress-bg">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+        <div class="progress-bar" data-progress="99%">
+            <span class="skill-name">Python</span>
+            <div class="progress-bg">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     </section>
 
     <section class="projects-section" id="projects">
@@ -135,65 +185,68 @@
         </div>
 
         <div class="projects-container">
-            <div class="project-card">
-                
-                <img src="WeatherApp.png" alt="Screenshot preview of the Weather App" class="project-visual-image">
-                
-                <div class="project-details">
-                    <h3>Weather App</h3>
-                    <p>A weather app using HTML, CSS, JavaScript with API data and offline local storage support.</p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JS</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link" aria-label="View Code"><i class="fas fa-code"></i> Code</a>
-                        <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                 <img src="Driving Game.png" alt="Screenshot preview of the Weather App" class="project-visual-image">
-                
-                <div class="project-details">
-                    <h3>Track Safety Education Simulation Game</h3>
-                    <p>How to drive? An educational driving simulation about track safety.</p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">Unity Assets</span>
-                        <span class="tech-tag">C++</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link" aria-label="View Code"><i class="fas fa-code"></i> Code</a>
-                        <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="Plant.png" alt="Screenshot preview of the Weather App" class="project-visual-image">
-                <div class="project-details">
-                    <h3>Plant Disease Detection
-</h3>
-                    <p>A modern tool for healthier plants – For Farmers, Home Gardeners & Students, To Agro-Tech Companies
-</p>
-                    <div class="project-tech-tags">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link" aria-label="View Code"><i class="fas fa-code"></i> Code</a>
-                        <a href="#" class="project-link" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    </div>
-                </div>
-            </div>
+            <div class="project-card" data-url="https://live-project-link.com">
+    <img src="WeatherApp.png" alt="Screenshot preview of the Weather App" class="project-visual-image">
+    <div class="project-details">
+        <h3>Weather App</h3>
+        <p>A weather app using HTML, CSS, JavaScript with API data and offline local storage support.</p>
+        <div class="project-tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JS</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">SQL</span>
         </div>
+    </div>
+</div>
+
+
+          <div class="project-card" data-url="https://live-project-link.com">
+    <img src="Driving Game.png" alt="Screenshot preview of the Driving Game" class="project-visual-image">
+    
+    <div class="project-details">
+        <h3>Track Safety Education Simulation Game</h3>
+        <p>How to drive? An educational driving simulation about track safety.</p>
+        <div class="project-tech-tags">
+            <span class="tech-tag">Unity Assets</span>
+            <span class="tech-tag">C++</span>
+        </div>
+    </div>
+</div>
+
+
+           <div class="project-card" data-url="https://live-project-link.com">
+    <img src="Plant.png" alt="Screenshot preview of Plant Disease Detection" class="project-visual-image">
+    <div class="project-details">
+        <h3>Plant Disease Detection</h3>
+        <p>A modern tool for healthier plants – For Farmers, Home Gardeners & Students, To Agro-Tech Companies</p>
+        <div class="project-tech-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+        </div>
+    </div>
+</div>
+
     </section>
+
+    <section class="slider-section" id="slider">
+    <div class="section-title">
+        <h2>Image Slider</h2>
+    </div>
+
+    <div class="slider-container">
+        <button class="prev">&#10094;</button>
+        <div class="slider-images">
+            <img src="Plant.png" alt="Slide 1" class="slide active">
+            <img src="Driving Game.png" alt="Slide 2" class="slide">
+            <img src="WeatherApp.png" alt="Slide 3" class="slide">
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
 
     <section class="experience-section" id="experience">
         <div class="section-title">
@@ -307,9 +360,45 @@
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
+                <p id="formMsg"></p>
+
             </div>
         </div>
     </section>
+
+    <section class="media-section" id="media">
+    <div class="section-title">
+        <h2>Video, Audio & Canvas</h2>
+    </div>
+
+    <div class="media-container">
+
+        <!-- VIDEO -->
+        <div class="media-item">
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="snaptik_7571786282544745746_v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- AUDIO -->
+        <div class="media-item">
+            <h3>My Audio Clip</h3>
+            <audio controls>
+                <source src="Wavin' Flag - When I get older I will be stronger (Lyrics) 🔥 Aesthetic #lyrics #stronger #shorts - Aleix Vibes.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- CANVAS
+        <div class="media-item">
+            <h3>Canvas Drawing</h3>
+            <canvas id="myCanvas" width="320" height="240" style="border:1px solid #555;"></canvas>
+        </div> -->
+
+    </div>
+</section>
 
     <footer class="main-footer">
         <div class="footer-container">
@@ -364,5 +453,136 @@
             <p>&copy; 2025 All rights reserved.</p>
         </div>
     </footer>
+    <button id="backToTop">↑</button>
+
+    <script src="black.js"></script>
+    <script src="video.js"></script>
+    <script src="backtotop.js"></script>
+    <script src="cards.js"></script>
+    <script src="header.js"></script>
+
+        <script>
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) {
+            backToTop.style.display = "block";
+        } else {
+            backToTop.style.display = "none";
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+
+<!-- Form JS -->
+<script>
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let msgBox = document.getElementById("formMsg");
+
+    // Validation
+    if (name === "" || email === "" || subject === "" || message === "") {
+        msgBox.style.color = "red";
+        msgBox.innerText = "All fields are required!";
+        return;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        msgBox.style.color = "red";
+        msgBox.innerText = "Please enter a valid email!";
+        return;
+    }
+
+    // Save to localStorage
+    localStorage.setItem("formName", name);
+    localStorage.setItem("formEmail", email);
+    localStorage.setItem("formSubject", subject);
+    localStorage.setItem("formMessage", message);
+
+    msgBox.style.color = "green";
+    msgBox.innerText = "Form submitted successfully! Redirecting...";
+
+    // Redirect
+    setTimeout(() => {
+        window.location.href = "form-details.html";
+    }, 800);
+});
+</script>
+
+<!-- Slider.js -->
+
+<script>
+const slides = document.querySelectorAll('.slider-images .slide');
+const prevBtn = document.querySelector('.slider-container .prev');
+const nextBtn = document.querySelector('.slider-container .next');
+let currentIndex = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if(i === index) slide.classList.add('active');
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+});
+
+// Optional: Auto-slide every 5 seconds
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}, 5000);
+</script>
+
+<!-- Skills.JS -->
+
+<script>
+// Animate skill bars when visible
+const skillBars = document.querySelectorAll(".progress-bar");
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+function animateSkillBars() {
+    skillBars.forEach(bar => {
+        const fill = bar.querySelector(".progress-fill");
+        const progress = bar.getAttribute("data-progress");
+        if (isInViewport(bar) && fill.style.width === "0px") {
+            fill.style.width = progress;
+        }
+    });
+}
+
+// Run on scroll and on load
+window.addEventListener("scroll", animateSkillBars);
+window.addEventListener("load", animateSkillBars);
+</script>
+
 </body>
 </html>

@@ -22,8 +22,8 @@ body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: white; 
+    padding-top: 65px; /* Adjust this value to match your navbar's height + padding */
 }
-
 /* Background Effect (Soft Gradient/Shadow for Hero) */
 body::before {
     content: '';
@@ -64,16 +64,35 @@ body::before {
 }
 
 /* --- Navigation Bar --- */
+/* --- Navigation Bar --- */
+/* --- Navigation Bar --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
-    background-color: transparent;
+    
+    background-color: transparent; 
+    
+    /* NEW: Remove the box-shadow */
+    box-shadow: none; 
+    
     width: 100%;
-    position: sticky;
+    position: fixed; 
     top: 0;
+    left: 0; 
     z-index: 100;
+    transition: top 0.3s ease-in-out, background-color 0.3s, box-shadow 0.3s; /* Added transitions */
+}
+
+/* NEW: Class to hide the navigation bar (keep this) */
+.navbar.nav-hidden {
+    top: -80px;
+}
+
+/* NEW: Class to hide the navigation bar */
+.navbar.nav-hidden {
+    top: -80px; /* Moves the entire bar off-screen (Adjust based on your header height) */
 }
 
 .logo {
@@ -194,9 +213,9 @@ body::before {
 
 /* NEW: Style for the actual image inside the social link anchor */
 .social-links .social-icon-img {
-    width: 100%; /* Image takes up the full width of the anchor container */
+    width: 100%; 
     height: 100%;
-    object-fit: contain; /* Ensures the logo fits without being cut off */
+    object-fit: contain; 
     display: block;
 }
 
@@ -234,9 +253,8 @@ body::before {
 .profile-circle {
     width: 350px;
     height: 350px;
-    /* REMOVED: background-color: var(--primary-color);, color: white;, font-size: 3em; */
-    
-    /* CRITICAL: Must use overflow: hidden to crop the image into a circle */
+
+
     overflow: hidden; 
     
     background-color: #f3f4f6; /* Optional: A fallback light background */
@@ -898,7 +916,7 @@ body::before {
         transform: translateX(-50%);
     }
 
-    /* **CONFIRMED: Responsive styling for social link images** */
+     /* Responsive styling for social link images** */ */
     .footer-social-links a {
         display: flex; /* Changed from inline-block to flex for better centering */
         justify-content: center;
@@ -962,4 +980,18 @@ body::before {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer; /* show clickable effect */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }

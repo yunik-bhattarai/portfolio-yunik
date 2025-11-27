@@ -1,0 +1,19 @@
+.media-section {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    text-align: center;
+    padding: 40px 0;
+}
+
+.media-section video,
+.media-section audio,
+.media-section canvas {
+    margin: 20px 0; /* Space between elements */
+}
+
+.media-section canvas {
+    border: 2px solid #3b82f6; /* Optional — looks cleaner */
+    border-radius: 10px;
+}
